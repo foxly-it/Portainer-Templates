@@ -1,0 +1,79 @@
+{
+	"version": "2",
+	"templates": [
+	
+		{
+			"type": 1,
+			"title": "Mariadb",
+			"name": "Mariadb",
+			"note": "Portainer App Templates by <a href='https://www.foxly.de' target='_blank'>Foxly.de</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/mariadb/config</p>",
+			"description": "[Mariadb](https://mariadb.org/) is one of the most popular database servers. Made by the original developers of MySQL.",
+			"platform": "linux",
+			"logo": "https://raw.githubusercontent.com/foxly-it/Portainer-Templates/main/img/mariadb-git.png",
+			"image": "linuxserver/mariadb:alpine",
+			"env": [
+				{
+					"name": "PUID",
+					"label": "PUID",
+					"default": "1024",
+					"description": "for GroupID"
+				},
+				{
+					"name": "PGID",
+					"label": "PGID",
+					"default": "100",
+					"description": "for UserID"
+				},
+				{
+					"name": "MYSQL_ROOT_PASSWORD",
+					"label": "MYSQL_ROOT_PASSWORD",
+					"default": "ROOT_ACCESS_PASSWORD",
+					"description": "Set this to root password for installation (minimum 4 characters)."
+				},
+				{
+					"name": "TZ",
+					"label": "TZ",
+					"default": "Europe/Berlin",
+					"description": "Specify a timezone to use for example Europe/Berlin"
+				},
+				{
+					"name": "MYSQL_DATABASE",
+					"label": "MYSQL_DATABASE",
+					"default": "USER_DB_NAME",
+					"description": "Specify the name of a database to be created on image startup."
+				},
+				{
+					"name": "MYSQL_USER",
+					"label": "MYSQL_USER",
+					"default": "MYSQL_USER",
+					"description": "This user will have superuser access to the database specified by MYSQL_DATABASE (do not use root here)."
+				},
+				{
+					"name": "MYSQL_PASSWORD",
+					"label": "MYSQL_PASSWORD",
+					"default": "DATABASE_PASSWORD",
+					"description": "Set this to the password you want to use for you MYSQL_USER (minimum 4 characters)."
+				},
+				{
+					"name": "REMOTE_SQL",
+					"label": "REMOTE_SQL",
+					"default": "http://URL1/your.sql,https://URL2/your.sql",
+					"description": "Set this to ingest sql files from an http/https endpoint (comma seperated array)."
+				}
+			],
+			"ports": [
+				"3306:3306/tcp"
+			],
+			"volumes": [
+			{
+				"container": "/config",
+				"bind": "/volume1/docker/mariadb/config"
+			}
+			],
+			"restart_policy": "unless-stopped"
+		},
+		
+		
+		
+	]
+}
