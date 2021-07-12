@@ -1,5 +1,7 @@
-[
-		{
+  
+{
+	"version": "2",
+	"templates": [{
 			"type": 1,
 			"title": "Mariadb",
 			"name": "Mariadb",
@@ -70,3 +72,4 @@
 			"restart_policy": "unless-stopped"
 		},
 	]
+}
