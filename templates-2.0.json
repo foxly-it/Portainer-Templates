@@ -3,13 +3,13 @@
 	"templates": [
 		{
 			"type": 1,
-			"title": "Adguardhome-sync",
-			"name": "Adguardhome-sync",
-			"note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/adguardhome-sync/config</p>",
-			"description": "[Adguardhome-sync](https://github.com/bakito/adguardhome-sync/) is a tool to synchronize AdGuardHome config to replica instances.",
+			"title": "Nextcloud",
+			"name": "Nextcloud",
+			"note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/nextcloud/config<br>mkdir -p /volume1/docker/nextcloud/data</p>",
+			"description": "[Nextcloud](https://nextcloud.com/) gives you access to all your files wherever you are. Where are your photos and documents? With Nextcloud you pick a server of your choice, at home, in a data center or at a provider. And that is where your files will be. Nextcloud runs on that server, protecting your data and giving you access from your desktop or mobile devices. Through Nextcloud you also access, sync and share your existing data on that FTP drive at the office, a Dropbox or a NAS you have at home.",
 			"platform": "linux",
-			"logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/adguardhomesync-icon.png",
-			"image": "linuxserver/adguardhome-sync:latest",
+			"logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/nextcloud-icon.png",
+			"image": "linuxserver/nextcloud:latest",
 			"env": [
 				{
 					"name": "PUID",
@@ -28,21 +28,19 @@
 					"label": "TZ",
 					"default": "Europe/Amsterdam",
 					"description": "Specify a timezone to use for example Europe/Amsterdam"
-				},
-				{
-					"name": "CONFIGFILE",
-					"label": "CONFIGFILE",
-					"default": "/config/adguardhome-sync.yaml",
-					"description": "Set a custom config file."
 				}
 			],
 			"ports": [
-				"8080:8080/tcp"
+				"443:443/tcp"
 			],
 			"volumes": [
 			{
 				"container": "/config",
-				"bind": "/volume1/docker/adguardhome-sync/config"
+				"bind": "/volume1/docker/nextcloud/config"
+			},
+			{
+				"container": "/data",
+				"bind": "/volume1/docker/nextcloud/data"
 			}
 			],
 			"restart_policy": "unless-stopped"
