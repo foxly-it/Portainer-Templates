@@ -1,7 +1,54 @@
-  
 {
 	"version": "2",
-	"templates": [{
+	"templates": [
+		{
+			"type": 1,
+			"title": "Adguardhome-sync",
+			"name": "Adguardhome-sync",
+			"note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/adguardhome-sync/config</p>",
+			"description": "[Adguardhome-sync](https://github.com/bakito/adguardhome-sync/) is a tool to synchronize AdGuardHome config to replica instances.",
+			"platform": "linux",
+			"logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/adguardhomesync-icon.png",
+			"image": "linuxserver/adguardhome-sync:latest",
+			"env": [
+				{
+					"name": "PUID",
+					"label": "PUID",
+					"default": "1024",
+					"description": "for GroupID"
+				},
+				{
+					"name": "PGID",
+					"label": "PGID",
+					"default": "100",
+					"description": "for UserID"
+				},
+				{
+					"name": "TZ",
+					"label": "TZ",
+					"default": "Europe/Amsterdam",
+					"description": "Specify a timezone to use for example Europe/Amsterdam"
+				},
+				{
+					"name": "CONFIGFILE",
+					"label": "CONFIGFILE",
+					"default": "/config/adguardhome-sync.yaml",
+					"description": "Set a custom config file."
+				}
+			],
+			"ports": [
+				"8080:8080/tcp"
+			],
+			"volumes": [
+			{
+				"container": "/config",
+				"bind": "/volume1/docker/adguardhome-sync/config"
+			}
+			],
+			"restart_policy": "unless-stopped"
+		},
+		{
+		
 			"type": 1,
 			"title": "Mariadb",
 			"name": "Mariadb",
