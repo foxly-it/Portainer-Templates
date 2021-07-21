@@ -101,8 +101,8 @@
 				{
 					"name": "REMOTE_SQL",
 					"label": "REMOTE_SQL",
-					"default": "http://URL1/your.sql,https://URL2/your.sql",
-					"description": "Set this to ingest sql files from an http/https endpoint (comma seperated array)."
+					"default": "",
+					"description": "Set this to ingest sql files from an http/https endpoint (comma seperated array e.g. http://URL1/your.sql,https://URL2/your.sql)."
 				}
 			],
 			"ports": [
