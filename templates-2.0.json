@@ -14,13 +14,13 @@
 				{
 					"name": "PUID",
 					"label": "PUID",
-					"default": "1024",
+					"default": "1000",
 					"description": "for GroupID"
 				},
 				{
 					"name": "PGID",
 					"label": "PGID",
-					"default": "100",
+					"default": "1000",
 					"description": "for UserID"
 				},
 				{
@@ -36,11 +36,11 @@
 			"volumes": [
 			{
 				"container": "/config",
-				"bind": "/volume1/docker/nextcloud/config"
+				"bind": "/portainer/Files/AppData/Config/nextcloud/config"
 			},
 			{
 				"container": "/data",
-				"bind": "/volume1/docker/nextcloud/data"
+				"bind": "/portainer/Files/AppData/Config/nextcloud/data"
 			}
 			],
 			"restart_policy": "unless-stopped"
@@ -65,7 +65,7 @@
 				{
 					"name": "PGID",
 					"label": "PGID",
-					"default": "100",
+					"default": "1000",
 					"description": "for UserID"
 				},
 				{
@@ -84,25 +84,25 @@
 					"name": "MYSQL_DATABASE",
 					"label": "MYSQL_DATABASE",
 					"default": "USER_DB_NAME",
-					"description": "Specify the name of a database to be created on image startup."
+					"description": "#optional Specify the name of a database to be created on image startup."
 				},
 				{
 					"name": "MYSQL_USER",
 					"label": "MYSQL_USER",
 					"default": "MYSQL_USER",
-					"description": "This user will have superuser access to the database specified by MYSQL_DATABASE (do not use root here)."
+					"description": "#optional This user will have superuser access to the database specified by MYSQL_DATABASE (do not use root here)."
 				},
 				{
 					"name": "MYSQL_PASSWORD",
 					"label": "MYSQL_PASSWORD",
 					"default": "DATABASE_PASSWORD",
-					"description": "Set this to the password you want to use for you MYSQL_USER (minimum 4 characters)."
+					"description": "#optional Set this to the password you want to use for you MYSQL_USER (minimum 4 characters)."
 				},
 				{
 					"name": "REMOTE_SQL",
 					"label": "REMOTE_SQL",
 					"default": "http://URL1/your.sql,https://URL2/your.sql",
-					"description": "Set this to ingest sql files from an http/https endpoint (comma seperated array)."
+					"description": "#optional Set this to ingest sql files from an http/https endpoint (comma seperated array)."
 				}
 			],
 			"ports": [
