@@ -5,7 +5,7 @@
 			"type": 1,
 			"title": "Nextcloud",
 			"name": "Nextcloud",
-			"note": "Portainer App Templates by <a href='https://foxly.de' target='_blank'>Foxly-IT</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/nextcloud/config<br>mkdir -p /volume1/docker/nextcloud/data</p>",
+			"note": "Portainer App Templates by <a href='https://foxly.de' target='_blank'>Foxly-IT</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /portainer/Files/AppData/Config/nextcloud/config<br>mkdir -p /portainer/Files/AppData/Config/nextcloud/data</p>",
 			"description": "Mit Nextcloud haben Sie Zugriff auf alle Ihre Dateien, wo immer Sie sind. Wo sind Ihre Fotos und Dokumente? Mit Nextcloud suchen Sie sich einen Server Ihrer Wahl aus, zu Hause, in einem Rechenzentrum oder bei einem Provider. Und dort befinden sich dann Ihre Dateien. Nextcloud läuft auf diesem Server, schützt Ihre Daten und ermöglicht Ihnen den Zugriff von Ihrem Desktop oder Ihren mobilen Geräten. Über Nextcloud greifen Sie auch auf Ihre bestehenden Daten auf dem FTP-Laufwerk im Büro, einer Dropbox oder einem NAS, das Sie zu Hause haben, zu, synchronisieren sie und teilen sie.",
 			"platform": "linux",
 			"logo": "https://raw.githubusercontent.com/foxly-it/Portainer-Templates/main/img/nextcloud-git.png",
