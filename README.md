@@ -5,8 +5,7 @@
 
 [![Blog](https://img.shields.io/static/v1.svg?color=FF6C54&labelColor=55555&logoColor=ffffff&style=for-the-badge&label=Foxly.de&message=IT-Blog)](https://foxly.de "How-To guides, opinions and much more!")
 [![GitHub](https://img.shields.io/static/v1.svg?color=FF6C54&labelColor=55555&logoColor=ffffff&style=for-the-badge&label=Foxly.de&message=GitHub)](https://github.com/foxly-it "view the source for all of our repositories.")
-[![Docker](https://img.shields.io/static/v1.svg?color=398fdb&labelColor=55555&logoColor=ffffff&style=for-the-badge&label=Docker&message=Nextcloud)](https://raw.githubusercontent.com/foxly-it/Portainer-Templates/main/templates-2.0.json "view the source for all of our repositories.")
-[![Portainer](https://img.shields.io/static/v1.svg?color=13bef9&labelColor=55555&logoColor=ffffff&style=for-the-badge&label=Portainer&message=Foxly.de)](https://foxly.de/category-article-list/69-portainer/ "view the source for all of our repositories.")
+[![Portainer](https://img.shields.io/static/v1.svg?color=13bef9&labelColor=55555&logoColor=ffffff&style=for-the-badge&label=Portainer&message=Foxly.de)](https://foxly.de/category-article-list/69-portainer/ "Installation Guide")
 
 
 ## Settings
