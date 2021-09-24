@@ -1,7 +1,7 @@
 # Portainer-Templates
 *These templates are exclusively for Portainer v2.X!*
 
-[![foxly.de](https://foxly.de/images/style-11/pageLogo-da5297a2.svg)](https://foxly.de)
+[![foxly.de](https://foxly.de/media/223-github-logo-png/)](https://foxly.de)
 
 [![Blog](https://img.shields.io/static/v1.svg?color=FF6C54&labelColor=55555&logoColor=ffffff&style=for-the-badge&label=Foxly.de&message=IT-Blog)](https://foxly.de "How-To guides, opinions and much more!")
 [![GitHub](https://img.shields.io/static/v1.svg?color=FF6C54&labelColor=55555&logoColor=ffffff&style=for-the-badge&label=Foxly.de&message=GitHub)](https://github.com/foxly-it "view the source for all of our repositories.")
