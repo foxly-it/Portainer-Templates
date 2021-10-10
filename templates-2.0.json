@@ -50,7 +50,7 @@
 			"type": 1,
 			"title": "Mariadb",
 			"name": "Mariadb",
-			"note": "Portainer App Templates by <a href='https://www.foxly.de' target='_blank'>Foxly.de</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /portainer/Files/AppData/Config</p>",
+			"note": "Portainer App Templates by <a href='https://www.foxly.de' target='_blank'>Foxly.de</a> based on data provided by <a href='https://www.mariadb.org' target='_blank'>mariadb.org</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /portainer/Files/AppData/Config</p>",
 			"description": "MariaDB ist einer der beliebtesten Datenbankserver. Hergestellt von den ursprünglichen Entwicklern von MySQL.",
 			"platform": "linux",
 			"logo": "https://raw.githubusercontent.com/foxly-it/Portainer-Templates/main/img/mariadb-git.png",
