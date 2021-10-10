@@ -54,67 +54,25 @@
 			"description": "MariaDB ist einer der beliebtesten Datenbankserver. Hergestellt von den ursprünglichen Entwicklern von MySQL.",
 			"platform": "linux",
 			"logo": "https://raw.githubusercontent.com/foxly-it/Portainer-Templates/main/img/mariadb-git.png",
-			"image": "linuxserver/mariadb:alpine",
+			"image": "mariadb:latest",
 			"env": [
-				{
-					"name": "PUID",
-					"label": "PUID",
-					"default": "1000",
-					"description": "for GroupID"
-				},
-				{
-					"name": "PGID",
-					"label": "PGID",
-					"default": "1000",
-					"description": "for UserID"
-				},
 				{
 					"name": "MYSQL_ROOT_PASSWORD",
 					"label": "MYSQL_ROOT_PASSWORD",
 					"default": "ROOT_ACCESS_PASSWORD",
 					"description": "Set this to root password for installation (minimum 4 characters)."
-				},
-				{
-					"name": "TZ",
-					"label": "TZ",
-					"default": "Europe/Berlin",
-					"description": "Specify a timezone to use for example Europe/Berlin"
-				},
-				{
-					"name": "MYSQL_DATABASE",
-					"label": "MYSQL_DATABASE",
-					"default": "USER_DB_NAME",
-					"description": "#optional Specify the name of a database to be created on image startup."
-				},
-				{
-					"name": "MYSQL_USER",
-					"label": "MYSQL_USER",
-					"default": "MYSQL_USER",
-					"description": "#optional This user will have superuser access to the database specified by MYSQL_DATABASE (do not use root here)."
-				},
-				{
-					"name": "MYSQL_PASSWORD",
-					"label": "MYSQL_PASSWORD",
-					"default": "DATABASE_PASSWORD",
-					"description": "#optional Set this to the password you want to use for you MYSQL_USER (minimum 4 characters)."
-				},
-				{
-					"name": "REMOTE_SQL",
-					"label": "REMOTE_SQL",
-					"default": "http://URL1/your.sql,https://URL2/your.sql",
-					"description": "#optional Set this to ingest sql files from an http/https endpoint (comma seperated array)."
 				}
 			],
 			"ports": [
-				"40000:3306/tcp"
+				"33306:3306/tcp"
 			],
 			"volumes": [
 			{
-				"container": "/config",
+				"container": "/var/lib/mysql",
 				"bind": "/portainer/Files/AppData/Config/mariadb"
 			}
 			],
-			"restart_policy": "unless-stopped"
+			"restart_policy": "always"
 		}
 	]
 }
